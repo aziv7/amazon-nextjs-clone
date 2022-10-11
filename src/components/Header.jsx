@@ -32,13 +32,16 @@ const Header = () => {
         <div className='flex items-center text-sm space-x-5 mx-8 whitespace-nowrap text-white'>
           <div className='link'>
             <p>Hello there</p>
-            <p>Account & Lists</p>
+            <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>
           <div className='link'>
-            <p>Returns & Orders</p>
+            <p className='font-extrabold md:text-sm'>Returns & Orders</p>
           </div>
-          <div className='link'>
-            <ShoppingCartIcon className='h-10' />
+          <div className='link relative hidden md:inline'>
+            <ShoppingCartIcon className='h-10 ' />
+            <div className='rounded-full absolute top-0 left-7 h-4 w-4 bg-yellow-400 text-xs font-bold text-black text-center'>
+              8
+            </div>
           </div>
         </div>
       </div>
