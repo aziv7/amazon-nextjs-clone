@@ -5,6 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const Banner = () => {
   return (
     <div className='relative'>
+      <div className='absolute bottom-0 top-20 z-30  w-full bg-gradient-to-t from-gray-100 to-transparent blur-2xl ' />
       <Carousel
         autoPlay
         interval={5000}
