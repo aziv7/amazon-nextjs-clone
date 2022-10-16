@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { Banner, Header, ProductFeed } from '../components';
+import axios from 'axios';
 
-export default function Home() {
+export default function Home({ products }) {
   return (
     <div className='bg-gray-100'>
       <Head>
@@ -13,8 +14,17 @@ export default function Home() {
         {/**Banner */}
         <Banner />
         {/**Products */}
-        <ProductFeed />
+        <ProductFeed products={products} />
       </main>
     </div>
   );
+}
+
+export async function getServerSideProps(ctx) {
+  const prod = await axios.get('https://fakestoreapi.com/products');
+  return {
+    props: {
+      products: prod.data,
+    },
+  };
 }

@@ -1,7 +1,14 @@
 import React from 'react';
+import Product from './Product';
 
-const ProductFeed = () => {
-  return <div></div>;
+const ProductFeed = ({ products }) => {
+  return (
+    <div>
+      {products.map((prod) => (
+        <Product product={prod} key={prod.id} />
+      ))}
+    </div>
+  );
 };
 
 export default ProductFeed;
