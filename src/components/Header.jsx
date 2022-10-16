@@ -45,7 +45,26 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className='flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm'>
+        <p className='link flex items-center space-x-1 '>
+          <MenuIcon className='h-6 ' /> <span>All</span>
+        </p>
+        <p className='link flex items-center space-x-1 '>
+          <span>Prime Video</span>
+        </p>
+        <p className='link flex items-center space-x-1 '>
+          <span>Amazon Business</span>
+        </p>
+        <p className='link flex items-center space-x-1 '>
+          <span>Today's Deals</span>
+        </p>
+        <p className='hidden lg:inline-flex'>Electronics</p>
+        <p className='hidden lg:inline-flex'>Food & Grocery</p>
+        <p className='hidden lg:inline-flex'>Prime</p>
+        <p className='hidden lg:inline-flex'>Buy Again</p>
+        <p className='hidden lg:inline-flex'>Shopper Toolkit</p>
+        <p className='hidden lg:inline-flex'>Health & Personal Care</p>
+      </div>
     </header>
   );
 };
